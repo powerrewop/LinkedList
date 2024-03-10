@@ -1,8 +1,5 @@
 package nay.kirill.generics.linkedList;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
 public class LinkedList<TItem> {
 
     private int size = 0;
@@ -77,20 +74,17 @@ public class LinkedList<TItem> {
 
     static class Node<TItem> {
 
-        public Node(@NotNull TItem item, @Nullable Node<TItem> prev) {
+        public Node(TItem item, Node<TItem> prev) {
             this.item = item;
             this.prev = prev;
         }
 
-        @NotNull
         private final TItem item;
 
         // Следующий узел в списке
-        @Nullable
         private Node<TItem> next;
 
         // Предыдущий узел в списке
-        @Nullable
         private Node<TItem> prev;
 
     }
