@@ -3,6 +3,7 @@ import nay.kirill.generics.linkedList.LinkedList;
 public class Main {
     public static void main(String[] args){
 
+        //Создадим объекты класса родителя
         Cl1 cl1 = new Cl1();
         cl1.test = "1";
         Cl1 cl2 = new Cl1();
@@ -16,6 +17,7 @@ public class Main {
         ls1.add(cl2);
         ls1.add(cl3);
 
+        //Создадим объекты класса потомка
         Cl2 cl12 = new Cl2();
         cl12.test = "4";
         Cl2 cl22 = new Cl2();
@@ -30,7 +32,9 @@ public class Main {
         ls2.add(cl32);
 
         ls1.printAll();
+        System.out.println("-------------------");
 
+        //Добавим к объектам родителя объекты потомков
         ls1.addAll(ls2);
 
         ls1.printAll();
